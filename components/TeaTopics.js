@@ -58,9 +58,11 @@ export default function TeaTopics() {
     //   Archive Function
     const archiveFunction = (e) => {
         const archive = e.target.value
-        const archiveTopic = topics.find(topic => topic.id === archive)
-        setTopics([...topics, archiveTopic.dissussedOn = Date.now()]);
-        console.log(archiveTopic);
+        console.log(archive);
+        const filteredArchiveTopic = topics.find(topic => topic.id === archive)
+        filteredArchiveTopic.dissussedOn = Date.now()
+        setTopics([...topics]);
+        console.log(filteredArchiveTopic);
     }
 
     // Delete Functiom
@@ -74,27 +76,27 @@ export default function TeaTopics() {
         <>
             <Form onSubmit={handleSubmit} onChange={handleChange}/>
             <div>
-            {topics
-            .filter(topic => topic.discussedOn === '')
-            .sort((a, b) => {
-                const ratioA = a.upvotes - a.downvotes;
-                const ratioB = b.upvotes - b.downvotes;
-                return ratioB - ratioA;
-            })
-            .map(topic => 
-                <UndiscussedTopic 
-                    key={topic.id} 
-                    upvotes={voteCount + topic.upvotes}
-                    downvotes={voteCount + topic.downvotes}
-                    votesOnClick={increamentUpVotes}
-                    downVotesOnclick={increamentDownVotes}
-                    archiveOnClick={archiveFunction}
-                    {...topic} 
-                />)
-            }
-      </div>
+                {topics
+                .filter(topic => topic.discussedOn === '')
+                .sort((a, b) => {
+                    const ratioA = a.upvotes - a.downvotes;
+                    const ratioB = b.upvotes - b.downvotes;
+                    return ratioB - ratioA;
+                })
+                .map(topic => 
+                    <UndiscussedTopic 
+                        key={topic.id} 
+                        upvotes={voteCount + topic.upvotes}
+                        downvotes={voteCount + topic.downvotes}
+                        votesOnClick={increamentUpVotes}
+                        downVotesOnclick={increamentDownVotes}
+                        archiveOnClick={archiveFunction}
+                        {...topic} 
+                    />)
+                }
+            </div>
 
-      <div>
+            <div>
         {topics
           .filter(topic => topic.discussedOn)
           .map(topic => {

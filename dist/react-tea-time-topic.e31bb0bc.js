@@ -29988,9 +29988,11 @@ function TeaTopics() {
 
   const archiveFunction = e => {
     const archive = e.target.value;
-    const archiveTopic = topics.find(topic => topic.id === archive);
-    setTopics([...topics, archiveTopic.dissussedOn = Date.now()]);
-    console.log(archiveTopic);
+    console.log(archive);
+    const filteredArchiveTopic = topics.find(topic => topic.id === archive);
+    filteredArchiveTopic.dissussedOn = Date.now();
+    setTopics([...topics]);
+    console.log(filteredArchiveTopic);
   }; // Delete Functiom
 
 
@@ -30096,7 +30098,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64434" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50540" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
