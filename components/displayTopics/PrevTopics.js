@@ -3,11 +3,11 @@ import trash from '../../icons/trash.svg'
 
 function PrevTopics(props) {
   return (
-    <div>
+    <div className='prev-topic'>
       <div>
-        <p>
+        <p className='desc-topic'>
           <span>{props.title}</span>
-          <button>
+          <button className='button trashBtn' onClick={props.onClick} value={props.id}>
             Delete
           </button>
         </p>

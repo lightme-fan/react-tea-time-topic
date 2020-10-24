@@ -1,0 +1,103 @@
+/* body {
+    background-color: rgba(0, 0, 0, 0.7);
+} */
+
+.container {
+    max-width: 700px;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 1rem;
+    border-radius: 8px; 
+    box-shadow: inset 0px 1px 9px 7px #000000;
+}
+
+.header {
+    text-align: center;
+}
+
+.input-form {
+    margin-right: 2rem;
+}
+
+.next-topic, .prev-topic {
+    max-width: 400px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #ffffff;
+    border-radius: 8px;
+    margin-top: 1rem;
+    padding: 1rem;
+}
+
+.description-topic {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+}
+
+.button {
+    background-color: transparent;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    border: none;
+    color: transparent;
+    width: 22px;
+}
+
+button:focus {
+    outline: none;
+}
+
+.archiveBtn {
+    background-image: url('./icons/archive.svg');
+    align-self: start;
+}
+
+.desc-topic {
+    display: flex;
+    justify-content: space-between;
+}
+
+.voteBtn {
+    display: flex;
+    justify-content: center;
+}
+
+.first-btn {
+    margin-right: 1rem;
+}
+
+.second-btn {
+    margin-left: 1rem;
+}
+
+.upvote {
+    background-image: url(./icons/like.svg);
+    background-color: rgb(250, 174, 44);
+    border-radius: 50%;
+}
+
+.downvote {
+    background-image: url(./icons/dislike.svg);
+    background-color: rgb(250, 174, 44);
+    border-radius: 50%;
+}
+
+.trashBtn {
+    background-image: url(./icons/trash.svg);
+    align-self: start;
+}
+
+@media (min-width: 500px) {
+    .addForm {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .submit-form {
+        height: 22px;
+        align-self: center;
+        margin-top: 1rem;
+    }
+}

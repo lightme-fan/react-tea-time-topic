@@ -1,0 +1,23 @@
+.container {
+    max-width: 800px;
+    margin: auto;
+}
+
+.input-form {
+    margin-right: 2rem;
+}
+
+@media (min-width: 500px) {
+    .addForm {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .submit-form {
+        height: 22px;
+        align-self: center;
+        margin-top: 1rem;
+    }
+}
+
+/*# sourceMappingURL=/react-tea-time-topic.e31bb0bc.css.map */
