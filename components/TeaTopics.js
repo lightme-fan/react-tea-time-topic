@@ -58,11 +58,9 @@ export default function TeaTopics() {
     //   Archive Function
     const archiveFunction = (e) => {
         const archive = e.target.value
-        console.log(archive);
         const filteredArchiveTopic = topics.find(topic => topic.id === archive)
-        filteredArchiveTopic.dissussedOn = Date.now()
-        setTopics([...topics]);
-        console.log(filteredArchiveTopic);
+        const archivedTopic = filteredArchiveTopic.discussedOn = new Date();
+        setTopics([...topics, archivedTopic])
     }
 
     // Delete Functiom
