@@ -89,6 +89,11 @@ button:focus {
     text-align: center;
     color: rgb(250, 174, 44);
 }
+
+.topic-heading {
+    text-align: center;
+}
+
 @media (min-width: 500px) {
     .addForm {
         display: flex;

@@ -73,7 +73,7 @@ export default function TeaTopics() {
     <>
       <Form onSubmit={handleSubmit} onChange={handleChange}/>
       <div>
-        <h2>Next Topics</h2>
+        <h2 className='topic-heading'>Next Topics</h2>
         {topics
         .filter(topic => topic.discussedOn === '')
         .sort((a, b) => {
@@ -95,7 +95,7 @@ export default function TeaTopics() {
       </div>
 
       <div>
-        <h2>Past Topics</h2>
+        <h2 className='topic-heading'>Past Topics</h2>
         {topics
         .filter(topic => topic.discussedOn)
         .map(topic => {
