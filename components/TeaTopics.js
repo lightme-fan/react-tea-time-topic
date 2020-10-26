@@ -71,49 +71,49 @@ export default function TeaTopics() {
 
   return (
     <>
-        <Form onSubmit={handleSubmit} onChange={handleChange}/>
-        <div>
-            <h2>Next Topics</h2>
-            {topics
-            .filter(topic => topic.discussedOn === '')
-            .sort((a, b) => {
-                const ratioA = a.upvotes - a.downvotes;
-                const ratioB = b.upvotes - b.downvotes;
-                return ratioB - ratioA;
-            })
-            .map(topic => 
-                <UndiscussedTopic 
-                    key={topic.id} 
-                    upvotes={voteCount + topic.upvotes}
-                    downvotes={voteCount + topic.downvotes}
-                    votesOnClick={increamentUpVotes}
-                    downVotesOnclick={increamentDownVotes}
-                    archiveOnClick={archiveFunction}
-                    {...topic} 
-                />)
-            }
-        </div>
+      <Form onSubmit={handleSubmit} onChange={handleChange}/>
+      <div>
+        <h2>Next Topics</h2>
+        {topics
+        .filter(topic => topic.discussedOn === '')
+        .sort((a, b) => {
+          const ratioA = a.upvotes - a.downvotes;
+          const ratioB = b.upvotes - b.downvotes;
+          return ratioB - ratioA;
+        })
+        .map(topic => 
+          <UndiscussedTopic 
+            key={topic.id} 
+            upvotes={voteCount + topic.upvotes}
+            downvotes={voteCount + topic.downvotes}
+            votesOnClick={increamentUpVotes}
+            downVotesOnclick={increamentDownVotes}
+            archiveOnClick={archiveFunction}
+            {...topic} 
+          />)
+        }
+      </div>
 
-        <div>
-            <h2>Past Topics</h2>
-            {topics
-            .filter(topic => topic.discussedOn)
-            .map(topic => {
-                const dissussedDate = topic.discussedOn;
-                const convertToNumber = Number(dissussedDate);
-                const convertToNormalDate = new Date(convertToNumber);
-                const date = convertToNormalDate.toLocaleDateString();
+      <div>
+        <h2>Past Topics</h2>
+        {topics
+        .filter(topic => topic.discussedOn)
+        .map(topic => {
+          const dissussedDate = topic.discussedOn;
+          const convertToNumber = Number(dissussedDate);
+          const convertToNormalDate = new Date(convertToNumber);
+          const date = convertToNormalDate.toLocaleDateString();
 
-                return ( 
-                    <PrevTopics 
-                        key={topic.id} 
-                        date={date}
-                        onClick={handleRemoveItem} 
-                        {...topic} 
-                    />
-                )
-            })}
-        </div>
+          return ( 
+            <PrevTopics 
+              key={topic.id} 
+              date={date}
+              onClick={handleRemoveItem} 
+              {...topic} 
+            />
+          )
+        })}
+      </div>
     </>
   )
 }
