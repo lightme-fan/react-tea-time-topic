@@ -29877,7 +29877,9 @@ function PrevTopics(props) {
     className: "button trashBtn",
     onClick: props.onClick,
     value: props.id
-  }, "Delete")), /*#__PURE__*/_react.default.createElement("div", null, "Discussed on ", props.date)));
+  }, "Delete")), /*#__PURE__*/_react.default.createElement("div", {
+    className: "discussed"
+  }, "Discussed on ", props.date)));
 }
 
 var _default = PrevTopics;
@@ -30095,7 +30097,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52761" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53899" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

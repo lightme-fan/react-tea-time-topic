@@ -11,7 +11,7 @@ function PrevTopics(props) {
             Delete
           </button>
         </p>
-          <div>Discussed on {props.date}</div>
+          <div className='discussed'>Discussed on {props.date}</div>
       </div>
     </div>
   )

@@ -85,6 +85,10 @@ button:focus {
     align-self: start;
 }
 
+.discussed {
+    text-align: center;
+    color: rgb(250, 174, 44);
+}
 @media (min-width: 500px) {
     .addForm {
         display: flex;
