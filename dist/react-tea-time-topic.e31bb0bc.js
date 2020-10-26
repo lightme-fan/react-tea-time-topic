@@ -29968,7 +29968,6 @@ function TeaTopics() {
   const handleSubmit = e => {
     e.preventDefault();
     setTopics([...topics, newTopic]);
-    console.log(topics);
   }; //   Increament Upvotes
 
 
@@ -30003,7 +30002,7 @@ function TeaTopics() {
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_Form.default, {
     onSubmit: handleSubmit,
     onChange: handleChange
-  }), /*#__PURE__*/_react.default.createElement("div", null, topics.filter(topic => topic.discussedOn === '').sort((a, b) => {
+  }), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h2", null, "Next Topics"), topics.filter(topic => topic.discussedOn === '').sort((a, b) => {
     const ratioA = a.upvotes - a.downvotes;
     const ratioB = b.upvotes - b.downvotes;
     return ratioB - ratioA;
@@ -30014,7 +30013,7 @@ function TeaTopics() {
     votesOnClick: increamentUpVotes,
     downVotesOnclick: increamentDownVotes,
     archiveOnClick: archiveFunction
-  }, topic)))), /*#__PURE__*/_react.default.createElement("div", null, topics.filter(topic => topic.discussedOn).map(topic => {
+  }, topic)))), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h2", null, "Past Topics"), topics.filter(topic => topic.discussedOn).map(topic => {
     const dissussedDate = topic.discussedOn;
     const convertToNumber = Number(dissussedDate);
     const convertToNormalDate = new Date(convertToNumber);
@@ -30096,7 +30095,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50045" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51579" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
