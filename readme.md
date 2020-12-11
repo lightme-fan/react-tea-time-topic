@@ -4,7 +4,7 @@ This is my Tea Time Topic project
 
 ### Screenshot
 
-![assets/Screenshot_2020-10-01_at_19.00.35.png](assets/Screenshot_2020-10-01_at_19.00.35.png)
+![Screenshot](https://bit.ly/3qTgdc2)
 
 #### Links to see this project.
 [Netlify Link]()
