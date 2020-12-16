@@ -1,17 +1,34 @@
-# Tea Time Topic
+h1 align="center">Tea Time Topic</h1>
 
-This is my Tea Time Topic project
+<div align="center">
+  <h3>
+    <a href="https://fanilo-tea-time-topic.netlify.app/">
+      Demo
+    </a>
+    <span> | </span>
+    <a href="https://github.com/lightme-fan/react-tea-time-topic">
+      Solution
+    </a>
+  </h3>
+</div>
 
-### Screenshot
+## Table of Contents
 
+-   [Overview](#overview)
+    -   [Built With](#built-with)
+-   [Features](#features)
+-   [How to use](#how-to-use)
+-   [Contact](#contact)
+-   [Acknowledgements](#acknowledgements)
+
+
+### Overview
 ![Screenshot](https://bit.ly/3qTgdc2)
 
-#### Links to see this project.
-[Netlify Link]()
-[Github Link]()
+### Buit with
+[React](https://reactjs.org/)
 
-### Things you see in this project
-
+### Features
 -   You can see the list of topics from the API whether it is already discussed or not.
 
 -   You are able to add new topics
@@ -24,4 +41,24 @@ This is my Tea Time Topic project
 
 -   You can delete an element from the past topic list.
 
-Thank you!
+## How To Use
+
+<!-- Example: -->
+
+To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
+
+```bash
+# Clone this repository
+$ git clone https://github.com/lightme-fan/react-tea-time-topic
+
+# Install dependencies
+$ npm install react react-dom 
+
+# Run the app
+$ parcel index.html
+```
+
+## Contact
+
+-   Website [Tea Time Topic](https://fanilo-tea-time-topic.netlify.app/)
+-   GitHub [lightme-fan](https://{github.com/lightme-fan})
